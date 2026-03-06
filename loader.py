@@ -9,6 +9,7 @@ def get_engine():
     creds = config['mysql']
     url = f"mysql+pymysql://{creds['username']}:{creds['password']}@{creds['host']}:{creds['port']}/{creds['database']}"
     engine = create_engine(url)
+    return engine
 
 
 def load_file_to_db(data_dir):
